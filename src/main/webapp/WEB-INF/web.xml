@@ -53,7 +53,15 @@
     <servlet-name>SpringMVC</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
-
+  <!--druid监控画面   访问地址如http://110.76.43.235:9000/druid/index.html -->
+  <servlet>
+    <servlet-name>DruidStatView</servlet-name>
+    <servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DruidStatView</servlet-name>
+    <url-pattern>/druid/*</url-pattern>
+  </servlet-mapping>
   <!-- 设置默认首页 -->
   <welcome-file-list>
     <welcome-file>/index.html</welcome-file>
